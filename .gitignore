@@ -1,4 +1,5 @@
 .claude/
 docs/
 vendor/
+storage/logs/
 .phpunit.result.cache
