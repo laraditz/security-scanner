@@ -2,4 +2,5 @@
 docs/
 vendor/
 storage/logs/
+composer.lock
 .phpunit.result.cache
