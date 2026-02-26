@@ -7,31 +7,11 @@
 
 A Laravel package that scans your application for common security vulnerabilities via a single Artisan command. It produces a color-coded terminal report and saves detailed JSON and HTML report files.
 
-```
-laraditz/security-scanner
-Scanning: /var/www/myapp
-
-[CRITICAL] SqlInjectionChecker
-  app/Http/Controllers/UserController.php:42
-  Potential SQL injection: DB::select() called with string concatenation or interpolation
-  Fix: Use parameter binding: pass an array of values as the second argument
-
-[HIGH] SecretsChecker
-  .env
-  APP_DEBUG=true exposes stack traces and sensitive data to users
-  Fix: Set APP_DEBUG=false in production
-
-────────────────────────────────────────
-  CRITICAL   2
-  HIGH       3
-────────────────────────────────────────
-
-Report saved: storage/logs/security-scan-2026-02-26.html
-```
+![Scanner](image.png)
 
 ## Requirements
 
-- PHP 8.1+
+- PHP 8.2+
 - Laravel 10 and above
 
 ## Installation
@@ -141,10 +121,26 @@ jq '.total > 0' /tmp/security-scan-$(date +%F).json && exit 1 || true
 ## Testing
 
 ```bash
-composer install
-./vendor/bin/phpunit
+composer test
 ```
+
+### Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+### Security
+
+If you discover any security related issues, please email raditzfarhan@gmail.com instead of using the issue tracker.
+
+## Credits
+
+- [Raditz Farhan](https://github.com/laraditz)
+- [All Contributors](../../contributors)
 
 ## License
 
-MIT
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
