@@ -1,5 +1,4 @@
 .claude/
-docs/
 vendor/
 storage/logs/
 composer.lock
