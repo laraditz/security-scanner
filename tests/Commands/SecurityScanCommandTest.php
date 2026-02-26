@@ -7,7 +7,7 @@ use Orchestra\Testbench\TestCase;
 
 class SecurityScanCommandTest extends TestCase
 {
-    private static $latestResponse;
+    public static $latestResponse;
 
     protected function getPackageProviders($app): array
     {
